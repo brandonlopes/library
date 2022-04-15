@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="index.js"></script>
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: white;
+            /* color: white; */
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center
+        }
+
+        a:visited {
+            color: palevioletred;
+        }
+
+        img {
+            /* max-width: 150px; */
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: 1px solid #999;
+            max-height: 150px;
+            margin: 0.4em;
+            box-shadow: 2px 2px 2px 1px #777;
+            transition-property: all;
+            transition-duration: 0.2s;
+            /* transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+        }
+
+        img:hover,
+        a:focus img {
+            /* transform: translateY(-7.5px);
+            transform: translatex(-5px); */
+            transform: translate(-2.5px, -7.5px);
+            box-shadow: 8px 10px 6px -6px #777;
+        }
+
+        div {
+            /* margin: auto; */
+            max-width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+        }
+
+        h2 {
+            width: 100%;
+            text-transform: capitalize;
+            border-bottom: 1px solid gray;
+            padding-bottom: 1em;
+        }
+
+        p{
+            
+            width: 25%;
+            height: 2em;
+            opacity: 1;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Fave Books</h2>
+
+    <p id="description"></p>
+        <!-- <a title="Meditations" rel="nofollow" href="https://www.goodreads.com/book/show/1168191.Meditations" target="_blank"><img alt="Meditations" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383681793l/1168191._SX98_.jpg" ></a>
+        <a title="Man's Search for Meaning" rel="nofollow" href="https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning" target="_blank"><img alt="Man's Search for Meaning" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535419394l/4069._SX98_.jpg" ></a>
+        <a title="Tao Te Ching" rel="nofollow" href="https://www.goodreads.com/book/show/2001800.Tao_Te_Ching" target="_blank"><img alt="Tao Te Ching" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1311705500l/2001800._SX98_.jpg" ></a>
+        <a title="Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones" rel="nofollow" href="https://www.goodreads.com/book/show/40121378-atomic-habits" target="_blank"><img alt="Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535115320l/40121378._SX98_.jpg" ></a>
+        <a title="Letters from a Stoic" href="https://www.goodreads.com/book/show/29771215-letters-from-a-stoic"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1460505686i/29771215.jpg" alt="" ></a>
+        <a title="The Art of War" rel="nofollow" href="https://www.goodreads.com/book/show/10534.The_Art_of_War" target="_blank"><img alt="The Art of War" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630683326l/10534._SX98_.jpg" ></a>
+        <a title="How to Win Friends and Influence People" rel="nofollow" href="https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People" target="_blank"><img alt="How to Win Friends and Influence People" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442726934l/4865._SX98_.jpg" ></a>
+        <a title="When: The Scientific Secrets of Perfect Timing" rel="nofollow" href="https://www.goodreads.com/book/show/35412097-when" target="_blank"><img alt="When: The Scientific Secrets of Perfect Timing" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1502223427l/35412097._SX98_.jpg" ></a>
+        <a title="1984" rel="nofollow" href="https://www.goodreads.com/book/show/3744438-1984" target="_blank"><img alt="1984" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327144697l/3744438._SX98_.jpg" ></a>
+        <a title="12 Rules for Life: An Antidote to Chaos" rel="nofollow" href="https://www.goodreads.com/book/show/30257963-12-rules-for-life" target="_blank"><img alt="12 Rules for Life: An Antidote to Chaos" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1512705866l/30257963._SX98_.jpg" ></a>
+        <a title="Why We Sleep: Unlocking the Power of Sleep and Dreams" rel="nofollow" href="https://www.goodreads.com/book/show/34466963-why-we-sleep" target="_blank"><img alt="Why We Sleep: Unlocking the Power of Sleep and Dreams" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1556604137l/34466963._SX98_.jpg" ></a>
+        <a title="Digital Minimalism: Choosing a Focused Life in a Noisy World" rel="nofollow" href="https://www.goodreads.com/book/show/40672036-digital-minimalism" target="_blank"><img alt="Digital Minimalism: Choosing a Focused Life in a Noisy World" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1549433350l/40672036._SX98_.jpg" ></a>
+        <a title="The Power of Now: A Guide to Spiritual Enlightenment" rel="nofollow" href="https://www.goodreads.com/book/show/6708.The_Power_of_Now" target="_blank"><img alt="The Power of Now: A Guide to Spiritual Enlightenment" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386925535l/6708._SX98_.jpg" ></a>
+        <a title="The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing" rel="nofollow" href="https://www.goodreads.com/book/show/22318578-the-life-changing-magic-of-tidying-up" target="_blank"><img alt="The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1418767178l/22318578._SX98_.jpg" ></a> -->
+
+
+<!-- <p id="description"></p> -->
+        
+
+</body>
+
+</html>
