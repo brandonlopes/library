@@ -11,8 +11,6 @@ Fetch("Goodreads.json").then(books => {
   printBooks(reading);
   // printBooks(want);
 
-
-  // hoverInfo();
 });
 
 // --------------------------------------------------------------------------------------
@@ -45,14 +43,4 @@ function printBooks(bookList) {
   document.body.appendChild(div);
   document.body.appendChild(p);
 
-}
-
-function hoverInfo() {
-  const links = document.querySelectorAll("a");
-  for (let i = 0; i < links.length; i++) {
-    links[i].target = "_blank";
-    links[i].addEventListener("mouseover", function () {
-      description.innerText = links[i].title;
-    })
-  }
 }
