@@ -1,5 +1,4 @@
 import json
-from operator import indexOf
 from pathlib import Path
 import requests
 
