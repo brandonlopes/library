@@ -8,8 +8,9 @@ def downloadImageFromUrl(url, filename):
     img = requests.get(url).content
     open(filename, "wb").write(img)
 
-for book in goodReads:
+booksWithCovers = [book for book in goodReads if "src" in book]
+for book in booksWithCovers: 
+    downloadImageFromUrl(book["src"], f"{book['Title']}.jpg")
 
-    print(book["src"])
-
+# downloadImageFromUrl(book["src"], f"{book["Title"]}.jpg")
 # images = [downloadImageFromUrl(book.src, f"{book.Title}.jpg") for book in goodReads]
