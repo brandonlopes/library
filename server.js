@@ -26,6 +26,8 @@ var downloadImageFromURL = (url, filename) => {
 
 // bookCovers.forEach(book => downloadImageFromURL(book.src, `${book.Title}.jpg`));
 
+
+// Add src attribute to Goodreads based on bookCovers.json
 const books = JSON.parse(fs.readFileSync("Goodreads.json"));
 const bookcovers = JSON.parse(fs.readFileSync("bookCovers.json"));
 
