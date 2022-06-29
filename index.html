@@ -6,15 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="index.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="https://brandonlopes.ca/trivia-game/css/style.css">
+    <title>Brandon's Library</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+        :root {
+            --black: #24292e;
+            --menu-icon: none;
+            --box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.5);
+            --menu-icon-display: none;
+            --nav-height: 3em;
+            --header-fill: none;
+
+            --text-color: var(--black);
+            --background: var(--gray0);
+
+            --gray0: #f8f9fa;
+            --gray1: #f1f3f5;
+            --gray2: #e9ecef;
+            --gray3: #dee2e6;
+            --gray4: #ced4da;
+            --gray5: #adb5bd;
+            --gray6: #868e96;
+            --gray7: #495057;
+            --gray8: #343a40;
+            --gray9: #212529;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
-            background-color: white;
+            background-color: var(--gray8);
             /* color: white; */
-            font-family: 'Lato', sans-serif;
+            font-family: Arial, Geneva, Tahoma, sans-serif;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -29,10 +55,10 @@
             /* max-width: 150px; */
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-            border: 1px solid #999;
+            border: 1px solid var(--gray9);
             max-height: 150px;
             margin: 0.4em;
-            box-shadow: 2px 2px 2px 1px #777;
+            box-shadow: 2px 2px 2px 1px var(--gray9);
             transition-property: all;
             transition-duration: 0.2s;
             /* transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
@@ -43,7 +69,8 @@
             /* transform: translateY(-7.5px);
             transform: translatex(-5px); */
             transform: translate(-2.5px, -7.5px);
-            box-shadow: 8px 10px 6px -6px #777;
+            /* #777 */
+            box-shadow: 8px 10px 6px -6px var(--gray9);
         }
 
         div {
@@ -51,7 +78,7 @@
             max-width: 600px;
             display: flex;
             flex-wrap: wrap;
-            justify-content:space-evenly;
+            justify-content: space-evenly;
         }
 
         h2 {
@@ -61,8 +88,8 @@
             padding-bottom: 1em;
         }
 
-        p{
-            
+        p {
+
             width: 25%;
             height: 2em;
             opacity: 1;
@@ -74,10 +101,12 @@
 
 <body>
 
-    <h1>Books</h1>
+    <h1>Brandon's Books</h1>
+
+    <p>Below are some of my favorite books, along with some I'm currently reading </p>
 
     <p id="description"></p>
-        <!-- <a title="Meditations" rel="nofollow" href="https://www.goodreads.com/book/show/1168191.Meditations" target="_blank"><img alt="Meditations" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383681793l/1168191._SX98_.jpg" ></a>
+    <!-- <a title="Meditations" rel="nofollow" href="https://www.goodreads.com/book/show/1168191.Meditations" target="_blank"><img alt="Meditations" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383681793l/1168191._SX98_.jpg" ></a>
         <a title="Man's Search for Meaning" rel="nofollow" href="https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning" target="_blank"><img alt="Man's Search for Meaning" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535419394l/4069._SX98_.jpg" ></a>
         <a title="Tao Te Ching" rel="nofollow" href="https://www.goodreads.com/book/show/2001800.Tao_Te_Ching" target="_blank"><img alt="Tao Te Ching" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1311705500l/2001800._SX98_.jpg" ></a>
         <a title="Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones" rel="nofollow" href="https://www.goodreads.com/book/show/40121378-atomic-habits" target="_blank"><img alt="Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535115320l/40121378._SX98_.jpg" ></a>
@@ -93,8 +122,8 @@
         <a title="The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing" rel="nofollow" href="https://www.goodreads.com/book/show/22318578-the-life-changing-magic-of-tidying-up" target="_blank"><img alt="The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1418767178l/22318578._SX98_.jpg" ></a> -->
 
 
-<!-- <p id="description"></p> -->
-        
+    <!-- <p id="description"></p> -->
+
 
 </body>
 

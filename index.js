@@ -1,7 +1,7 @@
 const Fetch = async url => await fetch(url).then(response => response.json());
 const description = document.getElementById("description");
 
-Fetch("Goodreads.json").then(books => {
+Fetch("booksWithCovers.json").then(books => {
 
   const booksRead = books.filter(book => book["Exclusive Shelf"] === "read");
   const reading = books.filter(book => book["Exclusive Shelf"] === "currently-reading");
@@ -9,7 +9,7 @@ Fetch("Goodreads.json").then(books => {
 
   printBooks(booksRead);
   printBooks(reading);
-  // printBooks(want);
+  printBooks(want);
 
 });
 
