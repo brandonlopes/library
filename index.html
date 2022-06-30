@@ -38,46 +38,65 @@
         }
 
         body {
-            background-color: var(--gray8);
+            background-color: var(--black);
             /* color: white; */
             font-family: Arial, Geneva, Tahoma, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             flex-wrap: wrap;
             align-items: center
+        }
+
+        a{
+            color: aquamarine;
         }
 
         a:visited {
             color: palevioletred;
         }
 
+        details > summary{
+            cursor: pointer;
+            list-style: none;
+            float: left;
+        }
+
+        details[open]{
+            background-color: var(--gray8);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.5);
+            justify-self: center;
+            z-index: 1;
+            width: 60%;
+            /* #777 */
+        }
+
         img {
             /* max-width: 150px; */
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-            border: 1px solid var(--gray9);
+            border: 1px solid rgba(0, 0, 0, 0.5);
             max-height: 150px;
             margin: 0.4em;
-            box-shadow: 2px 2px 2px 1px var(--gray9);
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
             transition-property: all;
             transition-duration: 0.2s;
             /* transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
         }
 
         img:hover,
-        a:focus img {
+        details:focus img {
             /* transform: translateY(-7.5px);
             transform: translatex(-5px); */
             transform: translate(-2.5px, -7.5px);
             /* #777 */
-            box-shadow: 8px 10px 6px -6px var(--gray9);
+            box-shadow: 8px 10px 6px -6px black;
         }
 
         div {
-            /* margin: auto; */
             max-width: 600px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-evenly;
         }
 
@@ -86,12 +105,12 @@
             text-transform: capitalize;
             border-bottom: 1px solid gray;
             padding-bottom: 1em;
+            text-align: center;
         }
 
         p {
-
-            width: 25%;
-            height: 2em;
+            /* padding: 1em;
+            height: 2em; */
             opacity: 1;
             transition-property: all;
             transition-duration: 2s;
@@ -105,7 +124,11 @@
 
     <p>Below are some of my favorite books, along with some I'm currently reading </p>
 
-    <p id="description"></p>
+    <details>
+        <summary><img src="/images/Tao Te Ching.jpg" alt="" srcset=""></summary>
+        <p>Book Info</p>
+    </details>
+
     <!-- <a title="Meditations" rel="nofollow" href="https://www.goodreads.com/book/show/1168191.Meditations" target="_blank"><img alt="Meditations" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383681793l/1168191._SX98_.jpg" ></a>
         <a title="Man's Search for Meaning" rel="nofollow" href="https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning" target="_blank"><img alt="Man's Search for Meaning" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535419394l/4069._SX98_.jpg" ></a>
         <a title="Tao Te Ching" rel="nofollow" href="https://www.goodreads.com/book/show/2001800.Tao_Te_Ching" target="_blank"><img alt="Tao Te Ching" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1311705500l/2001800._SX98_.jpg" ></a>
@@ -120,10 +143,6 @@
         <a title="Digital Minimalism: Choosing a Focused Life in a Noisy World" rel="nofollow" href="https://www.goodreads.com/book/show/40672036-digital-minimalism" target="_blank"><img alt="Digital Minimalism: Choosing a Focused Life in a Noisy World" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1549433350l/40672036._SX98_.jpg" ></a>
         <a title="The Power of Now: A Guide to Spiritual Enlightenment" rel="nofollow" href="https://www.goodreads.com/book/show/6708.The_Power_of_Now" target="_blank"><img alt="The Power of Now: A Guide to Spiritual Enlightenment" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386925535l/6708._SX98_.jpg" ></a>
         <a title="The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing" rel="nofollow" href="https://www.goodreads.com/book/show/22318578-the-life-changing-magic-of-tidying-up" target="_blank"><img alt="The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1418767178l/22318578._SX98_.jpg" ></a> -->
-
-
-    <!-- <p id="description"></p> -->
-
 
 </body>
 

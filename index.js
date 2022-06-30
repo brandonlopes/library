@@ -21,26 +21,35 @@ function printBooks(bookList) {
   document.body.appendChild(header);
 
   const div = document.createElement("div");
-  const p = document.createElement("p");
 
   bookList.forEach(book => {
     if (!book.src) return;
     const bookInfo = `${book.Title} \n by ${book.Author}, ${book["Year Published"]}`;
 
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+
+    const img = document.createElement("img");
+    img.src = `./images/${book.Title}.jpg`;
+    img.alt = book.Title;
+
     const link = document.createElement("a");
     link.href = `https://www.goodreads.com/book/show/${book["Book Id"]}`;
     link.target = "_blank";
     link.title = book.Title;
-    link.innerHTML = `<img src="./images/${book.Title}.jpg" alt="${book.Title}">`;
+    link.innerText = `More info about this book on Goodreads`
+    // link.innerHTML = `<img src="./images/${book.Title}.jpg" alt="${book.Title}">`;
 
-    link.addEventListener("mouseover", function (){
-      p.innerText = bookInfo;
-    });
+    const p = document.createElement("p");
+    p.innerText = `${book.Title} \nby ${book.Author}`;
     
-    div.appendChild(link);
+    summary.appendChild(img);
+    details.appendChild(summary);
+    details.appendChild(p);
+    details.appendChild(link);
+    div.appendChild(details);
     
   });
   document.body.appendChild(div);
-  document.body.appendChild(p);
 
 }
