@@ -63,14 +63,21 @@
         }
 
         details[open] {
+            /* display: flex;
+            justify-content: space-between; */
+            /* flex-direction: column; */
             background-color: var(--gray8);
             border-radius: 10px;
             box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.5);
-            justify-self: center;
             z-index: 1;
-            width: 40%;
+            width: 20em;
+            padding: 0.5em;
             /* #777 */
         }
+
+        /* details[open] p{
+            float: right;
+        } */
 
         img {
             /* max-width: 150px; */
@@ -95,12 +102,12 @@
         }
 
         div {
-            max-height: 600px;
+            max-height: 800px;
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
             justify-content: space-evenly;
-        }
+        } 
 
         h2 {
             width: 100%;
@@ -125,11 +132,6 @@
     <h1>Brandon's Books</h1>
 
     <p>Below are some of my favorite books, along with some I'm currently reading </p>
-
-    <details>
-        <summary><img src="/images/Tao Te Ching.jpg" alt="" srcset=""></summary>
-        <p>Book Info</p>
-    </details>
 
     <!-- <a title="Meditations" rel="nofollow" href="https://www.goodreads.com/book/show/1168191.Meditations" target="_blank"><img alt="Meditations" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383681793l/1168191._SX98_.jpg" ></a>
         <a title="Man's Search for Meaning" rel="nofollow" href="https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning" target="_blank"><img alt="Man's Search for Meaning" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535419394l/4069._SX98_.jpg" ></a>
