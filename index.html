@@ -48,7 +48,7 @@
             align-items: center
         }
 
-        a{
+        a {
             color: aquamarine;
         }
 
@@ -56,19 +56,19 @@
             color: palevioletred;
         }
 
-        details > summary{
+        details>summary {
             cursor: pointer;
             list-style: none;
             float: left;
         }
 
-        details[open]{
+        details[open] {
             background-color: var(--gray8);
             border-radius: 10px;
             box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.5);
             justify-self: center;
             z-index: 1;
-            width: 60%;
+            width: 40%;
             /* #777 */
         }
 
@@ -95,8 +95,10 @@
         }
 
         div {
-            max-width: 600px;
+            max-height: 600px;
             display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: space-evenly;
         }
 
